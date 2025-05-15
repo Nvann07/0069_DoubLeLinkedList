@@ -6,26 +6,61 @@ using namespace std;
 
 class Node
 {
-  public:
-   int noMhs;
-   Node *next;
-   Node *prev;
+public:
+  int noMhs;
+  Node *next;
+  Node *prev;
 };
 class DoubLeLinkedList
 {
 private:
-     Node *START;
+  Node *START;
 
 public:
-    DoubLeLinkedList()
+  DoubLeLinkedList()
   {
-        START = NULL;
+    START = NULL;
   }
 
   void addNode()
   {
-     int nim;
-     cout << "\nEnter the roll number of the student: ";
-     cin >> nim;
+    int nim;
+    cout << "\nEnter the roll number of the student: ";
+    cin >> nim;
+
+    // Step 1: Allocate memory for new node
+    Node *newNode = new Node();
+
+    // Step 2: Assign value to the data fields
+    newNode->noMhs = nim;
+
+    // Step 3: Insert at beginning if list is emty or nim is small
+    if (START == NULL && nim == START->noMhs)
+
+    {
+    {
+       cout << "\nDuplicate number not allowed" << endl;
+       return;
+    }
+    // Step 4: newNode.next = START 
+    newNode->next = START;
+
+    // Step 5: START.prev = newNode (if START exists)
+    if (START != NULL)
+      START->prev = newNode;
+
+      // Step 6: newNode.prev = NULL 
+      newNode->prev = NULL
+
+      // Step 7: START = newNode
+       START = newode;
+       return;
+    }
+
+    // insret in between node
+    // Step 8: Locate possition for insertion 
+    Node *current = START;
+    while (current->next != NULL && current->next>noMhs < nim)
   }
+
 }
