@@ -76,10 +76,24 @@ public:
     newNode->prev = current;       // Step 9b: newNode.next = current
 
     // Insert Last Node
-    if (curent->next != NULL)
+    if (current->next != NULL)
     current->next->prev = newNode;  // Step 9c: current.next.prev
 
     current->next = newNode; //  Step 9d current.next = newNode
-  
   }
+   void hapus()
+   {
+     if (START == NULL)
+     {
+         cout <<" \nList is empty" << endl;
+         return;
+     }
+
+     cout << "\nEnter the roll number of the student whose record is to be deletade: ";
+     int rollNo;
+     cin >> rollNo;
+
+     Node*current = START;
+
+    }
 }
