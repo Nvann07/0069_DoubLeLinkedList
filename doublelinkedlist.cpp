@@ -77,23 +77,35 @@ public:
 
     // Insert Last Node
     if (current->next != NULL)
-    current->next->prev = newNode;  // Step 9c: current.next.prev
+      current->next->prev = newNode; // Step 9c: current.next.prev
 
     current->next = newNode; //  Step 9d current.next = newNode
   }
-   void hapus()
-   {
-     if (START == NULL)
-     {
-         cout <<" \nList is empty" << endl;
-         return;
-     }
-
-     cout << "\nEnter the roll number of the student whose record is to be deletade: ";
-     int rollNo;
-     cin >> rollNo;
-
-     Node*current = START;
-
+  void hapus()
+  {
+    if (START == NULL)
+    {
+      cout << " \nList is empty" << endl;
+      return;
     }
+
+    cout << "\nEnter the roll number of the student whose record is to be deletade: ";
+    int rollNo;
+    cin >> rollNo;
+
+    Node *current = START;
+
+    // Step 1: Traves the list to find the node
+    while (current != NULL && current->noMhs != rollNo)
+      current = current->next;
+
+    if (current == NULL)
+    {
+      cout << "recodr not found" << endl;
+      return;
+    }
+
+    // Step 2: if node is at the beginning
+    if
+  }
 }
