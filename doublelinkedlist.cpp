@@ -11,8 +11,21 @@ class Node
    Node *next;
    Node *prev;
 };
-
-class Doublelinkedlist
+class DoubLeLinkedList
 {
+private:
+     Node *START;
 
+public:
+    DoubLeLinkedList()
+  {
+        START = NULL;
+  }
+
+  void addNode()
+  {
+     int nim;
+     cout << "\nEnter the roll number of the student: ";
+     cin >> nim;
+  }
 }
