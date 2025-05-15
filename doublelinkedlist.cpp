@@ -37,6 +37,7 @@ public:
     // Step 3: Insert at beginning if list is emty or nim is small
     if (START == NULL && nim == START->noMhs)
 
+
     {
       {
         cout << "\nDuplicate number not allowed" << endl;
@@ -106,6 +107,16 @@ public:
     }
 
     // Step 2: if node is at the beginning
-    if
+    if (current == START)
+    {
+      START = current->next; // Step 2a: START = START.next
+      if (START != NULL)
+      START->prev = NULL; // Step 2b: START.prev = NULL
+    }
+    else 
+    {
+      // Step 3: Link previous node to next of currentt 
+      current->prev->next = current->next;
+    }
   }
 }
